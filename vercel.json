@@ -19,7 +19,7 @@
   "routes": [
     {
       "src": "/api/contents/(?<id>[^/]+)",
-      "dest": "/api/contents/$id.ts",
+      "dest": "/api/contents/[id].ts?id=$id",
       "methods": ["GET", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Methods": "GET",
