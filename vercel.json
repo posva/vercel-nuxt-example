@@ -11,5 +11,16 @@
         "serverFiles": ["api/**"]
       }
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/contents/[id]",
+      "dest": "/api/contents/[id].ts",
+      "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Headers": "Content-Type"
+      }
+    }
   ]
 }
