@@ -8,6 +8,11 @@
       <ul>
         <li v-for="content in contents">{{ content.slice(0, 100) }}</li>
       </ul>
+
+      <pre>
+        {{ time }}
+        {{ server }}
+      </pre>
     </div>
   </div>
 </template>
@@ -17,6 +22,9 @@ import Vue from 'vue'
 
 export default Vue.extend({
   data: () => ({ contents: [] as string[] }),
+  asyncData() {
+    return { time: Date.now(), server: process.server }
+  },
   async mounted() {
     this.contents = await Promise.all([
       fetch('/api/hello').then((res) => res.text()),
