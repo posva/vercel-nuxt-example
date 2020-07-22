@@ -21,6 +21,15 @@
         "Access-Control-Allow-Methods": "GET",
         "Access-Control-Allow-Headers": "Content-Type"
       }
+    },
+    {
+      "src": "/api/hello",
+      "dest": "/api/hello.ts",
+      "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Headers": "Content-Type"
+      }
     }
   ]
 }
